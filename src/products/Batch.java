@@ -24,10 +24,10 @@ public class Batch {
 	}
 	
 	public int decrementQuantity(int quantityToDecrement) {
-		int newQuantity = this.quantity;
 		if (this.quantity >= quantityToDecrement) {
-			newQuantity = this.quantity - quantityToDecrement;
+			this.quantity -= quantityToDecrement;
 		}
+		int newQuantity = this.quantity;
 		return newQuantity;
 	}
 
@@ -37,5 +37,10 @@ public class Batch {
 			newQuantity = --this.quantity;
 		}
 		return newQuantity;
+	}
+
+	@Override
+	public String toString() {
+		return "Batch [ID=" + ID + ", product=" + product.toString() + ", quantity=" + quantity + "]";
 	}
 }

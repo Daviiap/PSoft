@@ -22,4 +22,9 @@ public class Product {
 	public String getManufacturer() {
 		return this.manufacturer;
 	}
+	
+	@Override
+	public String toString() {
+		return "Product [ID=" + ID + ", name=" + name + ", manufacturer=" + manufacturer + "]";
+	}
 }
